@@ -149,18 +149,17 @@ class Guild extends Base {
     /**
      * An array of enabled guild features, here are the possible values:
      * * ANIMATED_ICON
-     * * COMMERCE
-     * * LURKABLE
-     * * PARTNERED
-     * * NEWS
      * * BANNER
-     * * INVITE_SPLASH
-     * * MORE_EMOJI
-     * * VERIFIED
-     * * VIP_REGIONS
-     * * VANITY_URL
+     * * COMMERCE
      * * DISCOVERABLE
      * * FEATURABLE
+     * * INVITE_SPLASH
+     * * LURKABLE
+     * * NEWS
+     * * PARTNERED
+     * * VANITY_URL
+     * * VERIFIED
+     * * VIP_REGIONS
      * @typedef {string} Features
      */
 
@@ -487,15 +486,6 @@ class Guild extends Base {
    */
   get embedChannel() {
     return this.client.channels.get(this.embedChannelID) || null;
-  }
-
-  /**
-   * The `@everyone` role of the guild
-   * @type {?Role}
-   * @readonly
-   */
-  get defaultRole() {
-    return this.roles.get(this.id) || null;
   }
 
   /**
